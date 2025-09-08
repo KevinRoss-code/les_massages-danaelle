@@ -153,6 +153,20 @@ function show_table() {
 }
 show_table();
 
+document.getElementById("selectForm").addEventListener("change", function() {
+    // Masquer tous les formulaires
+    document.querySelectorAll(".formulaire").forEach(form => form.classList.remove("active"));
+
+    // Afficher celui sélectionné
+    const selectedForm = this.value;
+    const formToShow = document.getElementById("form" + capitalize(selectedForm));
+    if (formToShow) formToShow.classList.add("active");
+});
+
+// Fonction pour mettre une majuscule à la 1re lettre
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
 function buttonModif(el) {
   console.log(el);
   createModalUpdate("warning", "Modifier l'élément", "", "");

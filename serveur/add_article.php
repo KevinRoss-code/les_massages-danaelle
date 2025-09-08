@@ -1,6 +1,9 @@
 <?php
 require_once("../constance.php");
 
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
 $servername = DB_HOST;
 $username = DB_USER;
 $password = DB_PASSWORD;
@@ -35,6 +38,9 @@ if ($conn->connect_error) {
                 if ($imageFileType !== "jpg" && $imageFileType !== "png" && $imageFileType !== "jpeg" && $imageFileType !== "gif") {
                     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
                 } else {
+                    //faire attention au droit du dossier:
+                    //sudo chown -R www-data:www-data /var/www/html/site_anaelle/upload
+                    //sudo chmod -R 755 /var/www/html/site_anaelle/upload
                     if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
                         // The image has been successfully uploaded
                         $image_path = $targetFile;

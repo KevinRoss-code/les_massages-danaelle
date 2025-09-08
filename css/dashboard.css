@@ -1,7 +1,157 @@
-.idHidden {
+/* Reset et styles globaux */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin: 30px 0 10px;
+  color: #34495e;
+  border-left: 5px solid #3498db;
+  padding-left: 10px;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* Conteneur général */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Sélecteurs */
+select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Formulaires */
+.formulaire {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: none; /* masqué par défaut */
+}
+
+.formulaire label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.formulaire input[type="text"],
+.formulaire input[type="number"],
+.formulaire input[type="file"],
+.formulaire textarea,
+.formulaire select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.formulaire textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Boutons */
+input[type="button"],
+button {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="button"]:hover,
+button:hover {
+  background: #2980b9;
+}
+
+/* Tables */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+  background: #3498db;
+  color: #fff;
+  text-align: left;
+}
+
+.table th, .table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table tr:hover {
+  background: #f1f1f1;
+}
+
+/* Bouton modifier */
+.btn-modificateur {
+  background: #e67e22;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.btn-modificateur:hover {
+  background: #d35400;
+}
+
+/* Classes utilitaires */
+.hidden {
+  display: none !important;
+}
+
+br {
   display: none;
 }
 
-.hidden {
-  display: none;
+.formulaire.active {
+  display: block !important;
 }
